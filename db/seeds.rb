@@ -16,6 +16,7 @@ g2 = Game.create(name:'game 2', year:2017)
 Character.create(name:'chr 1', age:20, game_id:g1.id)
 
 g2.characters.create(name:'chr2', age:25)
+g1.characters.create(name:'chr3', age:26)
 
-puts Game.all.size
-puts Character.all.size
+puts "games in db #{Game.all.size}"
+puts "characters in db #{Character.all.size}"
