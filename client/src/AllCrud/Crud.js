@@ -43,7 +43,7 @@ const Crud = () => {
       <button
         onClick={() => {
           updateChr(games[0].id, {
-            id: 1,
+            id: 2,
             name: "chr5",
             age: 28,
           });
@@ -54,7 +54,7 @@ const Crud = () => {
 
       <button
         onClick={() => {
-          deleteChr(1, 1);
+          deleteChr(5, 2);
         }}
       >
         delete character

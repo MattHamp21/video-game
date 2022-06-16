@@ -11,7 +11,6 @@ end
 
 def create
   @game = Game.create(game_params)
-
   if(@game.save)
     render json: @game
   else

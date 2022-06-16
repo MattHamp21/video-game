@@ -19,8 +19,7 @@ class Api::CharactersController < ApplicationController
   end
 
   def create 
-
-    @character = @game.character.new(character_params)
+    @character = @game.characters.new(character_params)
     if(@character.save)
       render json: @character
     else
@@ -47,7 +46,7 @@ class Api::CharactersController < ApplicationController
     end
 
     def set_character
-      @character = @game.character.find(params[:id])
+      @character = @game.characters.find(params[:id])
     end
 
     def character_params

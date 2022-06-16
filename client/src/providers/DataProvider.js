@@ -43,7 +43,7 @@ const DataProvider = (props) => {
 
   const addGame = async (game) => {
     if (!game.name || game.name === "") {
-      alert("bad author data");
+      alert("bad addGame");
       return;
     }
     try {
@@ -92,7 +92,7 @@ const DataProvider = (props) => {
 
   const addChr = async (gameId, character) => {
     try {
-      let res = await axios.post(`/api/games/${gameId}/chraracters`, character);
+      let res = await axios.post(`/api/games/${gameId}/characters`, character);
       setChrs([res.data, ...chrs]);
     } catch (err) {
       alert("err occured add chr");
@@ -100,6 +100,7 @@ const DataProvider = (props) => {
   };
 
   const updateChr = async (gameId, chr) => {
+    console.log();
     try {
       let res = await axios.put(
         `/api/games/${gameId}/characters/${chr.id}`,

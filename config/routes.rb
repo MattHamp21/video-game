@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
     get '/characters', to: 'characters#all_characters'
     get '/characters/:id', to: 'characters#find_character'
+    put  '/characters/:id', to: 'characters#update'
   end
 end
 
